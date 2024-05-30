@@ -4,7 +4,7 @@ from steiner.steiner import Steiner
 
 def main():
     # Puntos iniciales del problema
-    puntos = [[0, 0], [1, 1], [1, 0], [0, 1]]
+    puntos = [[0, 0], [.5, 1], [.7, 0], [1, 1]]
 
     # Crear una instancia de Steiner
     steiner = Steiner(puntos)
