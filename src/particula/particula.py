@@ -67,9 +67,20 @@ class Particula:
         self.fitness = nueva_fitness
 
     def debo_reiniciar(self):
-        return self.empeora>= 20
+        """
+        Evalua si la particula debe reiniciar o no.
+        :return: false o true
+        """
+        return self.fitness >=20
 
     def actualiza_estado(self,limite_inferior,limite_superior,posicion_mejor_global):
+        """
+        Actualiza el estado de una particula en cada generacion.
+        :param limite_inferior:
+        :param limite_superior:
+        :param posicion_mejor_global:
+        :return:
+        """
         self.actualiza_velocidad(posicion_mejor_global)
         self.actualiza_posicion(limite_superior, limite_inferior)
         self.actualiza_fitness()
